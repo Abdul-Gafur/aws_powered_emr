@@ -73,12 +73,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'aws_powered_emr',
-	'dbdriver' => 'mysqli',
+    'hostname' => '$(cat aurora-endpoint.txt)',
+    'username' => 'admin',
+    'password' => 'YourSecurePassword',
+    'database' => 'hms',
+    'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
